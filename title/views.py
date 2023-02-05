@@ -24,14 +24,13 @@ def enter_details(req):
         #  serializer.save()
         print("hi")
     dict={}
+     # place your model here
     slogan="Lorem ipsum dolor sit amet, consectetur adipiscing"
     summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras erat dui, finibus vel lectus ac, pharetra dictum odio. Etiam risus sapien, auctor eu volutpat"
     dict["slogan"]=slogan
     dict["summary"]=summary
-    print(dict)
+   
     json_data=json.dumps(dict)
     result=json.loads(json_data)
     return Response(result)
 
-# data=json.dumps(c)
-#         print(c["title"])
