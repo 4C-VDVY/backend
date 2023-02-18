@@ -11,7 +11,7 @@ summary_tokenizer = BertTokenizerFast.from_pretrained(
 summary_model = EncoderDecoderModel.from_pretrained(
     "mrm8488/bert-small2bert-small-finetuned-cnn_daily_mail-summarization"
 ).to(device)
-slogan_model = torch.load("./title/slogan.pt")
+slogan_model = torch.load("F:\Digital Marketer\slogan.pt")
 MODEL_NAME = "distilgpt2"
 slogan_tokenizer = GPT2Tokenizer.from_pretrained(MODEL_NAME)
 SPECIAL_TOKENS_DICT = {
@@ -117,7 +117,7 @@ def sample_sequence(
     return generated
 
 
-## Test code
+# Test code
 # text = """
 # Jeff: Can I train a 🤗 Transformers model on Amazon SageMaker? 
 # Philipp: Sure you can use the new Hugging Face Deep Learning Container. 
