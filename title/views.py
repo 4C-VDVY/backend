@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from .serializers import Product_detailsSerializer
 from .models import Product_details
 import json
+
 # Create your views here.
 
 @api_view(['GET'])
@@ -21,7 +22,6 @@ def product_view(req):
 def enter_details(req):
     serializer=Product_detailsSerializer(data=req.data)
     if(serializer.is_valid()):
-        #  serializer.save()
         print("hi")
     dict={}
      # place your model here
