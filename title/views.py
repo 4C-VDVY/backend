@@ -8,6 +8,8 @@ from .generator import *
 import json
 import pandas as pd                        
 from pytrends.request import TrendReq
+from django.views.decorators.csrf import csrf_exempt
+@csrf_exempt
 
 
 @api_view(['GET'])
@@ -29,12 +31,12 @@ def enter_details(req):
     #     print("hi")
     data=req.data
     title=data["title"]
-    summary=data["summary"]
+    # summary=data["summary"]
     slogan=generate_slogan(title)
     dict["slogan"]=slogan
     
-    summary=generate_summary(summary)
-    dict["summary"]=summary
+    # summary=generate_summary(summary)
+    # dict["summary"]=summary
    
     json_data=json.dumps(dict)
     result=json.loads(json_data)
